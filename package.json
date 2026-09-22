@@ -1,0 +1,6 @@
+{
+  "name": "bad-decisions-capital-review",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": { "test": "node tests.mjs" }
+}

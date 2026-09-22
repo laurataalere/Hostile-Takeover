@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const s=JSON.parse(fs.readFileSync('submission.json','utf8'));
+const material=s.decisions.filter(d=>d.reviewTier==='material_judgment');
+assert.equal(s.decisions.length,100);
+assert.equal(new Set(s.decisions.map(d=>d.id)).size,100);
+assert.equal(material.length,25);
+assert.equal(material.filter(d=>d.finalDecisionOwner==='student_certified').length,25);
+assert.equal(s.decisions.filter(d=>d.finalDecisionOwner==='ai_prepared_student_checked').length,75);
+assert.equal(s.student.id,'lt24038');
+assert.equal(s.statements.balanceSheet.totalAssets,s.statements.balanceSheet.totalLiabilitiesAndEquity);
+assert.equal(s.statements.cashFlow.closingCash,s.statements.balanceSheet.cash);
+assert.equal(s.schedules.revenueAndReceivables.openingReceivables+s.schedules.revenueAndReceivables.revenue-s.schedules.revenueAndReceivables.collections,s.schedules.revenueAndReceivables.grossReceivables);
+console.log('Validated 100 decisions, 25 student certifications and all statement checks.');
