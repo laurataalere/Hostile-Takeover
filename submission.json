@@ -729,7 +729,7 @@
       "statementEffect": {
         "profit": -10000,
         "cash": 0,
-        "assets": 0,
+        "assets": -10000,
         "liabilities": 0,
         "equity": -10000
       },
@@ -754,7 +754,7 @@
       "statementEffect": {
         "profit": 0,
         "cash": -70000,
-        "assets": 0,
+        "assets": -70000,
         "liabilities": 0,
         "equity": -70000
       },
@@ -779,7 +779,7 @@
       "statementEffect": {
         "profit": 0,
         "cash": -40000,
-        "assets": 0,
+        "assets": -40000,
         "liabilities": 0,
         "equity": -40000
       },
@@ -1717,11 +1717,11 @@
       "independentChallenge": "Agent 2 independent position: Reject €312,000 management profit and use provisional corrected profit of €65,000.",
       "studentReasoning": "I certify that €312,000 management profit must not be used for the earn-out. The provisional corrected profit is €65,000, subject to the €9,000 inventory investigation.",
       "statementEffect": {
-        "profit": -247000,
+        "profit": 0,
         "cash": 0,
         "assets": 0,
         "liabilities": 0,
-        "equity": -247000
+        "equity": 0
       },
       "changedFromAI": false,
       "finalDecisionOwner": "student_certified",
